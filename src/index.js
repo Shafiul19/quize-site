@@ -11,6 +11,8 @@ import {
 
 import Home from './components/Home/Home';
 import TopicDetail from './components/TopicDetail/TopicDetail';
+import Statistics from './components/Statistics/Statistics';
+import Blog from './components/Blog/Blog';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +29,17 @@ const router = createBrowserRouter([
       path: 'topic/:topicId',
       element: <TopicDetail></TopicDetail>,
       loader: ({params}) => fetch(`https://openapi.programming-hero.com/api/quiz/${params.topicId}`)
+    },
+   
+    {
+      path: 'statistics',
+      element: <Statistics></Statistics>
+      
+    },
+   
+    {
+      path: 'blog',
+      element: <Blog></Blog>
     },
    
    ]
