@@ -9,11 +9,28 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
+import Home from './components/Home/Home';
+import TopicDetail from './components/TopicDetail/TopicDetail';
+
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <App></App>,
-  },
+    children: [
+    {
+      path: '/',
+      element: <Home></Home>,
+      loader: () => fetch('https://openapi.programming-hero.com/api/quiz')
+    },
+   
+    {
+      path: 'topic/:topicId',
+      element: <TopicDetail></TopicDetail>,
+      loader: ({params}) => fetch(`https://openapi.programming-hero.com/api/quiz/${params.topicId}`)
+    },
+   
+   ]
+  }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

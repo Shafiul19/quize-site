@@ -18,7 +18,7 @@ const NavBar = () => {
             </div>
             
             <ul className={`md:flex w-full bg-purple-200 text-center justify-center absolute md:static duration-500 ease-in ${open ? 'top-6' : 'top-[-120px]'}`}>
-                <li className='mr-12 font-bold'><Link>Home</Link></li>
+                <li className='mr-12 font-bold'><Link to ="/">Home</Link></li>
                 <li className='mr-12 font-bold'><Link>Statistics</Link></li>
                 <li className='mr-12 font-bold'><Link>Blog</Link></li>
             </ul>
