@@ -13,6 +13,7 @@ import Home from './components/Home/Home';
 import TopicDetail from './components/TopicDetail/TopicDetail';
 import Statistics from './components/Statistics/Statistics';
 import Blog from './components/Blog/Blog';
+import RouteNotExist from './components/RouteNotExist/RouteNotExist';
 
 const router = createBrowserRouter([
   {
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
     },
    
    ]
+  },
+  {
+    path: '*',
+    element: <RouteNotExist></RouteNotExist>
   }
 ]);
 
