@@ -7,6 +7,7 @@ const Statistics = () => {
     console.log(statistics.data)
     return (
         <div className='mt-16'>
+            <h3 className='text-3xl mb-4 pl-12'>Line chart draw based on topics and question numbers:</h3>
             <LineChart width={500} height={300} data={statistics.data}>
             
                 <XAxis dataKey="name" />
