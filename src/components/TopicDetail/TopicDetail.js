@@ -7,7 +7,7 @@ const TopicDetail = () => {
         const topicInfo = useLoaderData();
         console.log(topicInfo.data.questions)
         return (
-            <div className=' text-center mt-14 font-bold text-pink-950'>
+            <div className=' text-center mt-14 font-bold'>
                 <h2 className='text-3xl'>Quize of {topicInfo.data.name}.</h2>
     
                 {
